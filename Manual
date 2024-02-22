@@ -11,17 +11,17 @@ cat config
 
 
 Workstation/client server
-To check the docker isntallation logs
+To check the docker installation logs
 sudo tail -f /var/log/cloud-init-output.log
 
-Install kubectl client 
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-chmod +x kubectl
-sudo mv kubectl /usr/local/bin/kubectl
-kubectl version --client
+# Install kubectl client 
+# curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+# chmod +x kubectl
+# sudo mv kubectl /usr/local/bin/kubectl
+# kubectl version --client
 
 
-To connect to the kubernetes cluster we need authentication.
+To connect to the kubernetes cluster from kubectl we need authentication.
 mkdir .kube
 sudo vim .kube/config 
 paste the kubernetes authentication file. Check the 8th line.
